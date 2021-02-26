@@ -7,8 +7,6 @@ import axios from 'axios'
 
 const App = () => {
   
-  const pizzas = []
-  
   const initialValues = {
     name: '',
     size: '',
@@ -32,7 +30,7 @@ const App = () => {
   const initialDisabled = true
   
       
-  const [pie, setPie] = useState(pizzas)
+  const [pie, setPie] = useState([])
   const [values, setValues] = useState(initialValues)
   const [formE, setFormE] = useState(initialErrors)
   const [disabled, setDisabled] = useState(initialDisabled)
@@ -52,6 +50,18 @@ const App = () => {
     })
   }
   
+  const postNewPie = newPie => {
+    axios.post('https://reqres.in/api/users', newPie)
+    .then(res => {
+      setPie([...pie, res.data])
+      console.log(res.data.data)
+    })
+    .catch(err => {
+      console.log(err);
+    })
+    setValues(initialValues)
+  }
+  
   const submit = evt => {
     const newPie = {
       name: values.name,
@@ -63,9 +73,10 @@ const App = () => {
       special_instructions: values.special_instructions,
     }
     setPie(pie.concat(newPie))
+    postNewPie(newPie)
     setValues(initialValues)
   }
-  console.log(pizzas)
+  
 
   useEffect(() => {
     formSchema.isValid(values).then(valid => setDisabled(!valid))
