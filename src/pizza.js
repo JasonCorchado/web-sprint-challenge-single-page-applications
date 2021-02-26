@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Pizza(props) {
     
-    const { submit, change, values, disabled, errors,} = props
+    const { submit, change, values, disabled, } = props
 
     const onSubmit = evt => {
         evt.preventDefault()
@@ -52,7 +52,7 @@ export default function Pizza(props) {
             <label>Special Instructions
               <input name='special_instructions' type='text' onChange={onChange} value={values.special_instructions} placeholder='Special Instructions'/>
             </label>
-            <button disabled={disabled}>Submit</button>
+            <button disabled={disabled}>Add to Order</button>
             </form> 
         
         </div>

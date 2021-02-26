@@ -62,9 +62,9 @@ Your finished project must include all of the following requirements:
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [x] test that you can add text to the box
+- [x] test that you can select multiple toppings
+- [x] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
@@ -92,6 +92,6 @@ One of your goals is to return a database record of the order - for this you'll 
 
 Follow these steps for completing your project.
 
-- [ ] Submit a pull request to merge `<firstName-lastName>` branch into the `main` branch (student's repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull request
-- [ ] Your team lead will count the project as complete after receiving your pull request
+- [x] Submit a pull request to merge `<firstName-lastName>` branch into the `main` branch (student's repo). **Please don't merge your own pull request**
+- [x] Add your team lead as a reviewer on the pull request
+- [x] Your team lead will count the project as complete after receiving your pull request
