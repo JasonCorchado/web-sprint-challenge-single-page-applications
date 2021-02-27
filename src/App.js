@@ -54,7 +54,7 @@ const App = () => {
     axios.post('https://reqres.in/api/users', newPie)
     .then(res => {
       setPie([...pie, res.data])
-      console.log(res.data.data)
+      console.log(res.data)
     })
     .catch(err => {
       console.log(err);
@@ -94,7 +94,7 @@ const App = () => {
       </nav>
       <Switch>
         <Route path='/pizza'>
-          <Pizza submit = {submit} change = {change} values = {values} />
+          <Pizza submit = {submit} change = {change} values = {values} disabled = {disabled} />
           {pie.map((pie, idx) => {
             return (
               <div key={idx}>
